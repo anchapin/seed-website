@@ -1,0 +1,1611 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../user_doc_getting_started/">
+      
+      
+        <link rel="next" href="../developer_resources/">
+      
+      
+      <link rel="icon" href="../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.2.8">
+    
+    
+      
+        <title>Data Import - SEED Platform&trade; Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.046329b4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.85d0ee34.min.css">
+      
+      
+  
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 5h2V3h-2m0 18h2v-2h-2M11 5h2V3h-2m8 2h2V3h-2m0 6h2V7h-2m0 14h2v-2h-2m0-6h2v-2h-2m0 6h2v-2h-2M3 5h2V3H3m0 6h2V7H3m0 6h2v-2H3m0 6h2v-2H3m0 6h2v-2H3m8 2h2v-2h-2m-4 2h2v-2H7M7 5h2V3H7v2Z"/></svg>');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#data-import" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="SEED Platform&amp;trade; Documentation" class="md-header__button md-logo" aria-label="SEED Platform&trade; Documentation" data-md-component="logo">
+      
+  <img src="../images/icon-city.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SEED Platform&trade; Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Data Import
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/SEED-platform/seed" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="SEED Platform&amp;trade; Documentation" class="md-nav__button md-logo" aria-label="SEED Platform&trade; Documentation" data-md-component="logo">
+      
+  <img src="../images/icon-city.svg" alt="logo">
+
+    </a>
+    SEED Platform&trade; Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/SEED-platform/seed" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting_started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release_notes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Release Notes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    User Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            User Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user_doc_overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user_doc_getting_started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Data Import
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Data Import
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#data-import" class="md-nav__link">
+    Data Import
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-property-data" class="md-nav__link">
+    Building / Property Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#benchmarking-data" class="md-nav__link">
+    Benchmarking data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#match-data-from-different-sources" class="md-nav__link">
+    Match data from different sources
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handle-data-with-different-types-of-relationships" class="md-nav__link">
+    Handle data with different types of relationships
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maintain-data-based-on-compliance-year" class="md-nav__link">
+    Maintain data based on compliance year
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-import-workflow" class="md-nav__link">
+    Data import workflow
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#before-importing-data" class="md-nav__link">
+    Before importing data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#define-cycles-in-organizations-cycles" class="md-nav__link">
+    Define Cycles in Organizations / Cycles
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-files-with-multiple-years-of-data" class="md-nav__link">
+    Data files with multiple years of data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#define-matching-fields-in-organizations-column-settings" class="md-nav__link">
+    Define Matching fields in Organizations / Column Settings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#importing-data" class="md-nav__link">
+    Importing data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-data-set" class="md-nav__link">
+    Create a data set
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upload-a-spreadsheet" class="md-nav__link">
+    Upload a Spreadsheet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upload-a-tax-parcel-spreadsheet" class="md-nav__link">
+    Upload a tax parcel spreadsheet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mapping-the-data" class="md-nav__link">
+    Mapping the data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review-the-mapped-data" class="md-nav__link">
+    Review the mapped data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#importing-energy-star-portfolio-manager-data" class="md-nav__link">
+    Importing ENERGY STAR Portfolio Manager Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upload-an-energy-star-portfolio-manager-spreadsheet" class="md-nav__link">
+    Upload an ENERGY STAR Portfolio Manager spreadsheet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-meter-data" class="md-nav__link">
+    Adding Meter Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-sensor-data" class="md-nav__link">
+    Adding Sensor Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deleting-data-and-data-sets" class="md-nav__link">
+    Deleting Data and Data Sets
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developer_resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Developer Documentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../known_issues/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Known Issues
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../news/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    News
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Hosting
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Hosting
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../test_instance_request/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Requesting Test Instance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../technical_ally/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SEED Technical Allies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hosting_requirements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hosting Provider Process
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app_developer_requirements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    App Developers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            FAQ
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_1" >
+        
+          <label class="md-nav__link" for="__nav_8_1" id="__nav_8_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Features
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_1">
+            <span class="md-nav__icon md-icon"></span>
+            Features
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/features/geocoding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Geocoding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/features/inventory_management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inventory Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/features/misc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Miscellaneous
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/hosting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hosting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/industry_involvement/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Industry Involvement
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/security/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#data-import" class="md-nav__link">
+    Data Import
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-property-data" class="md-nav__link">
+    Building / Property Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#benchmarking-data" class="md-nav__link">
+    Benchmarking data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#match-data-from-different-sources" class="md-nav__link">
+    Match data from different sources
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handle-data-with-different-types-of-relationships" class="md-nav__link">
+    Handle data with different types of relationships
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maintain-data-based-on-compliance-year" class="md-nav__link">
+    Maintain data based on compliance year
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-import-workflow" class="md-nav__link">
+    Data import workflow
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#before-importing-data" class="md-nav__link">
+    Before importing data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#define-cycles-in-organizations-cycles" class="md-nav__link">
+    Define Cycles in Organizations / Cycles
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-files-with-multiple-years-of-data" class="md-nav__link">
+    Data files with multiple years of data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#define-matching-fields-in-organizations-column-settings" class="md-nav__link">
+    Define Matching fields in Organizations / Column Settings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#importing-data" class="md-nav__link">
+    Importing data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-data-set" class="md-nav__link">
+    Create a data set
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upload-a-spreadsheet" class="md-nav__link">
+    Upload a Spreadsheet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upload-a-tax-parcel-spreadsheet" class="md-nav__link">
+    Upload a tax parcel spreadsheet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mapping-the-data" class="md-nav__link">
+    Mapping the data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review-the-mapped-data" class="md-nav__link">
+    Review the mapped data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#importing-energy-star-portfolio-manager-data" class="md-nav__link">
+    Importing ENERGY STAR Portfolio Manager Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upload-an-energy-star-portfolio-manager-spreadsheet" class="md-nav__link">
+    Upload an ENERGY STAR Portfolio Manager spreadsheet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-meter-data" class="md-nav__link">
+    Adding Meter Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-sensor-data" class="md-nav__link">
+    Adding Sensor Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deleting-data-and-data-sets" class="md-nav__link">
+    Deleting Data and Data Sets
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>Data Import</h1>
+
+<h2 id="data-import"><strong>Data Import</strong><a class="headerlink" href="#data-import" title="Permanent link">&para;</a></h2>
+<p>SEED is primarily a data management platform, and importing the data is
+a critical component to understand.</p>
+<details class="note">
+<summary><strong>Overview</strong></summary>
+<p>SEED can import data from many different sources, for example:</p>
+<h2 id="building-property-data">Building / Property Data<a class="headerlink" href="#building-property-data" title="Permanent link">&para;</a></h2>
+<p>Building and property lists can sometimes be difficult to create. There
+are a few different sources of data that may help, which can be imported
+into SEED in the form of spreadsheets with one line per building, such
+as:</p>
+<ul>
+<li>
+<p>Tax assessor lists</p>
+</li>
+<li>
+<p>Real estate data</p>
+</li>
+</ul>
+<h2 id="benchmarking-data">Benchmarking data<a class="headerlink" href="#benchmarking-data" title="Permanent link">&para;</a></h2>
+<p>One of the primary sources of building information for benchmarking and
+Building Performance Standards (BPS) ordinances is data entered by
+building owners into ENERGY STAR Portfolio Manager which is then shared
+with jurisdictions who are determining compliance with the ordinances.</p>
+<p>SEED can import data from spreadsheets downloaded from ENERGY STAR
+Portfolio Manager and then imported into SEED. It is also possible to
+log into an ENERGY STAR Portfolio Manager account directly from SEED and
+specify a report to be imported. This functionality is not currently
+automated.</p>
+<h2 id="match-data-from-different-sources">Match data from different sources<a class="headerlink" href="#match-data-from-different-sources" title="Permanent link">&para;</a></h2>
+<p>One of the strengths of SEED is that data for a specific building or
+property can be imported from multiple sources and then matched and
+merged within SEED so that all the information related to that building
+is collected in one platform.</p>
+<p>In order for the data from different sources to be merged together,
+there must be one or more "matching" fields that are in all the data.
+These fields are identified during the data import "Mapping" step, which
+will be discussed in the next section. These matching fields typically
+include:</p>
+<ul>
+<li>
+<p>Tax Assessor Parcel ID</p>
+</li>
+<li>
+<p>Custom Building ID</p>
+</li>
+<li>
+<p>ENERGY STAR Portfolio Manager ID</p>
+</li>
+</ul>
+<h2 id="handle-data-with-different-types-of-relationships">Handle data with different types of relationships<a class="headerlink" href="#handle-data-with-different-types-of-relationships" title="Permanent link">&para;</a></h2>
+<p>In addition to matching and merging data for the same building or
+property, SEED can establish a relationship between a Tax Assessor
+Parcel and the buildings or properties associated with that parcel.
+Establishing this relationship is optional, but if Tax Assessor Parcel
+data is used to begin the creation of a building or property list, or
+the parcel / building relationship is desired, SEED can accomplish this
+during the mapping process, as long as there is both a tax parcel ID and
+a building or property ID in the data being imported.</p>
+<p>The image below shows the possibilities of tax parcel and building
+relationships:</p>
+<ul>
+<li>
+<p>Case A: A one to one relationship, ie, one building on one parcel</p>
+</li>
+<li>
+<p>Case B: Multiple buildings on one parcel</p>
+</li>
+<li>
+<p>Case C: One building on multiple parcels</p>
+</li>
+<li>
+<p>Case D: Multiple buildings on multiple parcels, such as a campus
+    &gt; scenario</p>
+</li>
+</ul>
+<p><img alt="" src="Pictures/10000201000004FE0000028E8C0220C39544F7EF.png" /></p>
+<p>The SEED data model establishes the relationship between the tax parcels
+and buildings as shown in the simplified diagram below. In the main
+Inventory list view, there are two tabs, one for Property and one for
+Tax Lot.</p>
+<p><img alt="" src="Pictures/100002010000042C000002622E2149B077A45A03.png" /></p>
+<h2 id="maintain-data-based-on-compliance-year">Maintain data based on compliance year<a class="headerlink" href="#maintain-data-based-on-compliance-year" title="Permanent link">&para;</a></h2>
+<p>Data is imported into SEED by "cycles", which are generally defined on a
+calendar basis, to keep track of the annual compliance of buildings.
+There are several features in SEED which allow importing, viewing, and
+analyzing the status of buildings across cycles.</p>
+<h2 id="data-import-workflow">Data import workflow<a class="headerlink" href="#data-import-workflow" title="Permanent link">&para;</a></h2>
+<p>The first three steps in the diagram below shows the workflow when
+importing data into SEED</p>
+<p><img alt="" src="Pictures/10000201000001E7000002A7490433ED2CCD09F0.png" /></p>
+</details>
+<h2 id="before-importing-data"><strong>Before importing data</strong><a class="headerlink" href="#before-importing-data" title="Permanent link">&para;</a></h2>
+<p>There are a few steps that should be completed before importing data, in
+order to have a smooth process.</p>
+<h2 id="define-cycles-in-organizations-cycles">Define Cycles in Organizations / Cycles<a class="headerlink" href="#define-cycles-in-organizations-cycles" title="Permanent link">&para;</a></h2>
+<p>It is important to create the appropriate cycle to import the data into.
+SEED has one "default" cycle that can be used as is, or edited to suit
+the first data import. It is also possible to make as many cycles as
+needed to import the data.</p>
+<p><img alt="" src="Pictures/10000000000003C000000300DF7045FFA704C4B4.png" /></p>
+<p><img alt="" src="Pictures/1000020100000467000002D72AA6B8239D921F4B.png" /></p>
+<h2 id="data-files-with-multiple-years-of-data"><strong>Data files with multiple years of data</strong><a class="headerlink" href="#data-files-with-multiple-years-of-data" title="Permanent link">&para;</a></h2>
+<p>If a file is to be imported with multiple cycles (years) of data in it,
+the appropriate cycles need to be defined before importing the data. For
+example, if there is data from 2019, 2020 and 2021 in one file, and that
+data is to be associated with the cycle for each year, a cycle for each
+of those years needs to be defined. SEED uses a field called "Year
+Ending". This is a default field that is in ENERGY STAR Portfolio
+Manager data, but could be added to other data if needed.</p>
+<p><img alt="" src="Pictures/1000020100000424000000DCE6BBEE8E49512ECD.png" /></p>
+<p><img alt="" src="Pictures/1000020100000426000000DC938DECFEC455A3A9.png" /></p>
+<p>Make sure that a cycle is defined for each year of data in the data
+file.</p>
+<p><img alt="" src="Pictures/10000201000001CA00000113FCE2346A094CA375.png" /></p>
+<h2 id="define-matching-fields-in-organizations-column-settings">Define Matching fields in Organizations / Column Settings<a class="headerlink" href="#define-matching-fields-in-organizations-column-settings" title="Permanent link">&para;</a></h2>
+<p>In order to map the fields properly when importing data, it is important
+to define the fields that will be the "matching" fields across data
+files.</p>
+<p>The matching fields are defined in Organizations / Column Settings.
+There is a column called "MATCH CRITERIA", and the fields that are
+matching fields should be checked. There can be just one field defined,
+or multiple fields. Standard fields for matching are the PM Property ID
+field from ENERGY STAR Portfolio Manager, and/or the Custom ID 1 field,
+which can represent any unique building ID.</p>
+<p>The Column Description field can be edited to represent a more
+descriptive name. For example, if the matching field is Custom ID 1,
+that Column Description could be changed to "City X Building ID".</p>
+<p><img alt="" src="Pictures/100002010000046E0000025E674835DD2C5BCBEA.png" /></p>
+<p>Once the cycles are properly defined and the matching fields are set, it
+is time to import the data</p>
+<h2 id="importing-data"><strong>Importing data</strong><a class="headerlink" href="#importing-data" title="Permanent link">&para;</a></h2>
+<p>There are a few different ways to start importing data. You can click
+the DATA navigation button on the left side of the screen, or you can
+click on the "Upload your Buildings List" button on the main SEED
+Platform screen.</p>
+<p><img alt="" src="Pictures/1000020100000427000002AEE8B6D4AA8516B312.png" /></p>
+<h2 id="create-a-data-set">Create a data set<a class="headerlink" href="#create-a-data-set" title="Permanent link">&para;</a></h2>
+<p>The DATA navigation button on the left side of the application will
+display the screen shown below, where a new data set can be created. The
+Data Set Name can be any text that describes the data set that is being
+created. There will potentially be multiple files imported in a data
+set.</p>
+<p><img alt="" src="Pictures/1000020100000430000001FA1E06280B8E5E3437.png" /></p>
+<p>Clicking the "Create Data Set" button will open the screen shown below,
+which has several options for what type of data to upload, as well as
+how to upload it.</p>
+<p>The first step is to assign this data upload to a cycle -- the pull
+down list will show all the cycles that are defined. It is also possible
+to define a new cycle by clicking the "Manage available cycles" link
+under the Cycle pulldown. And if the file being imported has multiple
+years defined (based on a field called "Year Ending") the "Multiple
+Cycle Upload" box can be checked.</p>
+<p><img alt="" src="Pictures/10000201000002720000023129FB916B35CD8CDE.png" /></p>
+<h2 id="upload-a-spreadsheet">Upload a Spreadsheet<a class="headerlink" href="#upload-a-spreadsheet" title="Permanent link">&para;</a></h2>
+<p>The first option in the list of upload options is "Upload a
+Spreadsheet".</p>
+<p>This option assumes that the spreadsheet will have one record per
+property or tax parcel. This spreadsheet can contain both property /
+building and tax parcel information, or it can be just one or the other.</p>
+<p>Here is an example of a spreadsheet representing a list of tax parcels
+that have buildings on them. Each row represents a tax parcel.</p>
+<p><img alt="" src="Pictures/10000201000002E4000000FF387DF2D534DABD1E.png" /></p>
+<p>Here is an example spreadsheet of building information from ENERGY STAR
+Portfolio Manager for the same buildings. In this case, each row
+represents an individual building, and each row has the tax parcel ID
+associated with the building.</p>
+<p><img alt="" src="Pictures/10000201000004C60000011AD68131AECF50383C.png" /></p>
+<p>When these two spreadsheets are imported into SEED, the relationship
+between the tax lots and buildings can be established in the mapping
+step.</p>
+<h2 id="upload-a-tax-parcel-spreadsheet"><strong>Upload a tax parcel spreadsheet</strong><a class="headerlink" href="#upload-a-tax-parcel-spreadsheet" title="Permanent link">&para;</a></h2>
+<p>First, import the tax parcel spreadsheet into the data set by clicking
+the Upload a Spreadsheet button, navigating to the file to be imported,
+and as the file is imported, messages will appear to show the progress
+of the upload.</p>
+<p><img alt="" src="Pictures/1000020100000277000000E28911788AFD7C935A.png" /></p>
+<p>This message appears when the file has completed the first upload step.
+Click the "Continue to data mapping" button to move to the next step.</p>
+<p><img alt="" src="Pictures/100002010000027F00000110432629A458833B78.png" /></p>
+<h2 id="mapping-the-data">Mapping the data<a class="headerlink" href="#mapping-the-data" title="Permanent link">&para;</a></h2>
+<p>The Mapping screen will now appear, and the fields in the uploaded file
+need to be mapped to the appropriate SEED fields.</p>
+<p>If this is the first file being imported, the easiest way to start the
+mapping is to click the "Copy Data File Headers directly to SEED
+headers" which copies the fields from the right hand side (the fields in
+the uploaded file) to the SEED Mapped Fields on the left side.</p>
+<p><img alt="" src="Pictures/1000020100000529000002B7A106E2E02F83BAD3.png" /></p>
+<p>Change the field called "Parcel Number" to the matching field
+"Jurisdiction Tax Lot ID".</p>
+<p><img alt="" src="Pictures/100002010000024D000000760076AACC8D567D9A.png" /></p>
+<p>Save the final mapping to a "Column Mapping Profile name, to save the
+mappings for another file of the same structure.</p>
+<p><img alt="" src="Pictures/10000201000002CF000000FA39E2413EE461581D.png" /></p>
+<p>This creates a Column Mapping profile that can be used again for another
+file with the same fields.</p>
+<p><img alt="" src="Pictures/10000201000002D600000038C9A84C4A6CFD7AEB.png" /></p>
+<p>Then click the Map Your Data button to go to the Mapping Review screen.</p>
+<p><img alt="" src="Pictures/100002010000007A0000002EA60B6B8BD58F7671.png" /></p>
+<h2 id="review-the-mapped-data">Review the mapped data<a class="headerlink" href="#review-the-mapped-data" title="Permanent link">&para;</a></h2>
+<p>In the Mapping Review screen all the records will be displayed, with the
+new field mapping. If there is anything that needs to be changed, click
+the Back to Mapping button and the mapping can be changed as needed.</p>
+<p><img alt="" src="Pictures/10000201000004B000000242270A1289EC66D1C3.png" /></p>
+<p>Click the Save Mappings button to complete the data upload process; a
+confirmation screen will be displayed. Click the Confirm mappings</p>
+<p><img alt="" src="Pictures/100002010000024700000126B4E2620623B03342.png" /></p>
+<p>A progress bar will be displayed.</p>
+<p><img alt="" src="Pictures/1000020100000249000000E897650DFC5E419893.png" /></p>
+<p>When the matching is complete, a summary of what was imported will be
+displayed.</p>
+<p><img alt="" src="Pictures/1000020100000249000001C1A958A4A27ADBA30E.png" /></p>
+<p>Click the View my Properties to go to the Inventory list to see the
+uploaded data.</p>
+<h2 id="importing-energy-star-portfolio-manager-data">Importing ENERGY STAR Portfolio Manager Data<a class="headerlink" href="#importing-energy-star-portfolio-manager-data" title="Permanent link">&para;</a></h2>
+<p>There are two methods for importing ENERGY STAR Portfolio Manager Data</p>
+<ul>
+<li>
+<p>Download a spreadsheet from the ENERGY STAR Portfolio Manager
+    &gt; application and import that spreadsheet into SEED</p>
+</li>
+<li>
+<p>Log in to the ENERGY STAR Portfolio Manager account from SEED and
+    &gt; specify the Custom Report Template to upload into SEED. This
+    &gt; eliminates the need to use the spreadsheet option</p>
+</li>
+</ul>
+<p><img alt="" src="Pictures/1000020100000398000002DB4E73C53A6A1B80F1.png" /></p>
+<h2 id="upload-an-energy-star-portfolio-manager-spreadsheet"><strong>Upload an ENERGY STAR Portfolio Manager spreadsheet</strong><a class="headerlink" href="#upload-an-energy-star-portfolio-manager-spreadsheet" title="Permanent link">&para;</a></h2>
+<p>After uploading the tax lot spreadsheet, the next step might be to load
+the ENERGY STAR Portfolio Manager spreadsheet for the buildings
+associated with the tax lots already imported.</p>
+<p>The same steps are followed as any other spreadsheet:</p>
+<ul>
+<li>In the same Data Set, click the Add more data files link</li>
+</ul>
+<blockquote>
+<p><img alt="" src="Pictures/100002010000035E000000AC4AD160CA0058738E.png" /></p>
+</blockquote>
+<ul>
+<li>Make sure the same cycle is selected, then click the Upload a
+    &gt; Spreadsheet button.</li>
+</ul>
+<blockquote>
+<p><img alt="" src="Pictures/1000020100000219000000DE657C8657B2597781.png" /></p>
+</blockquote>
+<ul>
+<li>
+<p>Browse to the appropriate file</p>
+</li>
+<li>
+<p>In the Mapping screen</p>
+<ul>
+<li>
+<p>Copy the Data File headers to the SEED headers</p>
+</li>
+<li>
+<p>Set the INVENTORY TYPE to Property for all fields except "Parcel
+    &gt; ID"</p>
+</li>
+<li>
+<p>Set the INVENTORY TYPE to Tax Lot for the "Parcel ID" field, and
+    &gt; change the SEED Header mapping to the Tax Lot matching field
+    &gt; "Jurisdiction Tax Lot ID". This will establish the
+    &gt; relationship between the PM Property ID Matching field and the
+    &gt; Jurisdiction Tax Lot field for each record</p>
+</li>
+<li>
+<p>Save the final mapping to a new Column Mapping Profile</p>
+</li>
+<li>
+<p>Click Map Your data to go to the Mapping Review screen</p>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><img alt="" src="Pictures/10000201000004080000024703F8BB09F928946C.png" /></p>
+<p>Mapping the Parcel ID to the Tax Lot table and the PM Property ID to
+the Property table results in records where the data from each can be
+viewed together.</p>
+<p><img alt="" src="Pictures/10000201000003BB000002732CB63029B45A0E3D.png" /></p>
+</blockquote>
+<ul>
+<li>The Mapping Review screen will show the records mapped to the
+    &gt; Properties table and the records mapped to the Tax Lot table</li>
+</ul>
+<blockquote>
+<p><img alt="" src="Pictures/10000201000004250000035EE23EA55F97C5B662.png" /></p>
+</blockquote>
+<ul>
+<li>
+<p>Click Save Mappings to finish the record mapping and matching
+    &gt; process</p>
+<ul>
+<li>The progress bar will be displayed</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><img alt="" src="Pictures/1000020100000246000000DC14514783BBAEE863.png" /></p>
+</blockquote>
+<ul>
+<li>
+<ul>
+<li>The results of the matching and merging will be displayed</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><img alt="" src="Pictures/10000201000002490000015DA53158BBBA759A2E.png" /></p>
+</blockquote>
+<ul>
+<li>Click the View my properties button to view the imported data in the
+    &gt; Inventory List</li>
+</ul>
+<blockquote>
+<p><img alt="" src="Pictures/10000201000004BF000001D81A6894FC88393AA5.png" /></p>
+</blockquote>
+<h2 id="adding-meter-data">Adding Meter Data<a class="headerlink" href="#adding-meter-data" title="Permanent link">&para;</a></h2>
+<h2 id="adding-sensor-data">Adding Sensor Data<a class="headerlink" href="#adding-sensor-data" title="Permanent link">&para;</a></h2>
+<h2 id="deleting-data-and-data-sets">Deleting Data and Data Sets<a class="headerlink" href="#deleting-data-and-data-sets" title="Permanent link">&para;</a></h2>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      
+    
+  </body>
+</html>
